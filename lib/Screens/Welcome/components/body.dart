@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../Login/login_screen.dart';
-import '../../../components/rounded_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../components/rounded_button.dart';
 import '../../../constants.dart';
+import '../../Login/login_screen.dart';
+import '../../Signup/signup_screen.dart';
 import 'background.dart';
 
 class Body extends StatelessWidget {
@@ -24,27 +25,39 @@ class Body extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: size.height * 0.05,),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
             SvgPicture.asset(
               'assets/icons/chat.svg',
               height: size.height * 0.45,
             ),
-            SizedBox(height: size.height * 0.05,),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
             RoundedButton(
               text: 'LOGIN',
               press: () {
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context){
-                      return LoginScreen();
-                    }),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return LoginScreen();
+                  }),
                 );
               },
             ),
             RoundedButton(
-              text: 'SIGNUP',
+              text: 'SIGN UP',
               color: primaryLightColor,
               textColor: Colors.black,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return SignUpScreen();
+                  }),
+                );
+              },
             ),
           ],
         ),
