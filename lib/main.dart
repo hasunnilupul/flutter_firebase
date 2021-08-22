@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_firebase/Screens/Login/login_screen.dart';
+import 'package:flutter_firebase/Screens/Signup/signup_screen.dart';
 import 'constants.dart';
 
 import 'Screens/Welcome/welcome_screen.dart';
@@ -20,6 +22,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       home: WelcomeScreen(),
+      routes: {
+        '/': (context) => WelcomeScreen(),
+        '/login': (context) => LoginScreen(),
+        '/register': (context) => SignUpScreen(),
+      },
     );
   }
 }
