@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../Login/login_screen.dart';
 import '../../../components/rounded_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -31,7 +32,13 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05,),
             RoundedButton(
               text: 'LOGIN',
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context){
+                      return LoginScreen();
+                    }),
+                );
+              },
             ),
             RoundedButton(
               text: 'SIGNUP',
