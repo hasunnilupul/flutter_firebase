@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "148775040648",
+    "project_id": "flireb",
+    "storage_bucket": "flireb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148775040648:android:492d9cd54214c58c4a113d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148775040648-9ugrkf9nut7p288vrsgkav6da6re0rs6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmzJrs_XTTJa6W-rAZbzj4Qfjtu7sT3BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148775040648-9ugrkf9nut7p288vrsgkav6da6re0rs6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:transition/transition.dart';
 
 import '../../../components/rounded_button.dart';
 import '../../../constants.dart';
@@ -40,9 +41,10 @@ class Body extends StatelessWidget {
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return LoginScreen();
-                  }),
+                  Transition(
+                    child: LoginScreen(),
+                    transitionEffect: TransitionEffect.TOP_TO_BOTTOM,
+                  ),
                 );
               },
             ),
@@ -53,9 +55,10 @@ class Body extends StatelessWidget {
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return SignUpScreen();
-                  }),
+                  Transition(
+                    child: SignUpScreen(),
+                    transitionEffect: TransitionEffect.TOP_TO_BOTTOM,
+                  ),
                 );
               },
             ),

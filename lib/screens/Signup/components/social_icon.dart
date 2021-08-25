@@ -1,13 +1,19 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 
 class SocialIcon extends StatelessWidget {
-  const SocialIcon({Key? key, required this.iconSrc, required this.press}) : super(key: key);
+  const SocialIcon(
+      {Key? key,
+      required this.iconSrc,
+      this.iconColor = primaryColor,
+      required this.press})
+      : super(key: key);
 
   final String iconSrc;
+  final Color iconColor;
   final Function() press;
 
   @override
@@ -25,6 +31,7 @@ class SocialIcon extends StatelessWidget {
         ),
         child: SvgPicture.asset(
           iconSrc,
+          color: iconColor,
           height: 20,
           width: 20,
         ),
